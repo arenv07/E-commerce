@@ -13,12 +13,12 @@ export const Home = () => {
             })
             .catch(error => {
                 console.error('Error fetching data:', error);
-            });
+            })
     }, []);
 
     return (
         <div>
-            <h1>Shop Page</h1>
+            {/* <h1>Shop Page</h1> */}
             {/* Displaying each card */}
             <div className="cards">
                 {products.map((product, index) => (
