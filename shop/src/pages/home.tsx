@@ -1,15 +1,15 @@
 import Axios from "axios";
 import { useState, useEffect } from 'react';
+import {Card} from '../components/card';
+import '../css/home.css';
 
 export const Home = () => {
-    const [titles, setTitles] = useState([]);
+    const [products, setProducts] = useState([]);
 
     useEffect(() => {
         Axios.get("https://fakestoreapi.com/products")
             .then((res) => {
-                // Extracting titles from the array of products
-                const productTitles = res.data.map(product => product.title);
-                setTitles(productTitles);
+                setProducts(res.data);
             })
             .catch(error => {
                 console.error('Error fetching data:', error);
@@ -18,13 +18,13 @@ export const Home = () => {
 
     return (
         <div>
-            <h1>Home Page</h1>
-            {/* Displaying each title */}
-            <ul>
-                {titles.map((title, index) => (
-                    <li key={index}>{title}</li>
+            <h1>Shop Page</h1>
+            {/* Displaying each card */}
+            <div className="cards">
+                {products.map((product, index) => (
+                    <Card product={product} key={index}/>
                 ))}
-            </ul>
+            </div> 
         </div>
     );
 };

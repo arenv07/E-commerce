@@ -1,0 +1,25 @@
+.card {
+    width: 400px;
+    height: auto;
+    padding: 2rem;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    border: 3px solid black;
+}
+
+.card-image {
+    object-fit: cover;
+}
+
+hr {
+    margin: 2rem 0;
+}
+
+.card-description {
+    margin: 1rem 0;
+}
+
+.price {
+    font-weight: bold;
+}
