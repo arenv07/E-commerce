@@ -1,6 +1,6 @@
 import '../css/navbar.css';
 import { Link } from "react-router-dom";
-
+import {Cart} from "../components/cart";
 
 export const Navbar = () => {
     return (
@@ -23,7 +23,7 @@ export const Navbar = () => {
                         <button className="search-button"></button>
                     </div>
                     <div className="cart">
-                        <p>CART ()</p>
+                        <Cart />
                     </div>
                 </div>
             </div>

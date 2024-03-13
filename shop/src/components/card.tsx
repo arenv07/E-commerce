@@ -1,8 +1,8 @@
-import Axios from "axios";
-import { useState, useEffect } from 'react';
+// import { useState } from 'react';
 import '../css/card.css';
 
 export const Card = ({product}) => {
+
     return (
         <div className="card">
             <img className="card-image" src={product.image} alt={product.title} />
